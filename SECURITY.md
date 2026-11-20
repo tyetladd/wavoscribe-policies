@@ -1,6 +1,6 @@
 # Security Policy
 
-Wavoscribe for Android. Last updated 19 November 2026.
+Wavoscribe for Android. Last updated 20 November 2026.
 
 What protects your data, and where each protection stops, written so each claim can be checked.
 What data the app holds and sends is in the [privacy policy](PRIVACY.md).
@@ -26,6 +26,16 @@ breached. The one network use is downloading speech models (below).
 The microphone is open only while a dictation runs. *Record in the background* (off by default) is
 the only way it stays open after you leave the app, and then Android shows a notification for as
 long as it does.
+
+With Settings › Recording › *Microphone* on *Car or headset when connected* (off by default), the
+audio comes over the Bluetooth hands-free link from the car or headset, the same link a phone call
+uses, and is protected only as well as that link is. The link is opened when a dictation starts and
+released when it pauses or stops; your audio and text are never sent the other way. If the car or headset goes away
+mid-dictation, the recording stops there and what was recorded is kept.
+
+*Speak when a recording starts and stops* (off by default) hands Android's text-to-speech engine the
+app's own few phrases, never your words, and only with a voice already installed that needs no
+network. A phrase not finished within a few seconds is cut off before the microphone opens.
 
 ## Model downloads
 

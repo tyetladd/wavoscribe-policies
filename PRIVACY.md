@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Wavoscribe for Android. Last updated 19 November 2026.
+Wavoscribe for Android. Last updated 20 November 2026.
 
 **The short version.** Wavoscribe recognizes your speech on your phone. Your voice, your recordings
 and the text made from them never leave it unless you share them yourself. The app has no account,
@@ -17,7 +17,12 @@ Wavoscribe ("the app") is a smart voice recorder and dictation app for Android, 
 All of the following is kept in the app's private storage, which other apps cannot read, and is
 never sent anywhere by the app:
 
-- **Microphone audio.** It is recorded only while a dictation runs and is processed on the phone.
+- **Microphone audio.** It is recorded only while a dictation runs and is processed on the phone. With
+  Settings › Recording › *Microphone* on *Car or headset when connected* (off by default), it comes
+  from a connected car's or headset's Bluetooth microphone instead, as a hands-free call's would; it
+  is still recorded and processed on the phone. Your audio and text are never sent to the car or
+  headset; only the app's spoken phrases and whether a dictation is recording or paused may reach it
+  (section 3).
 - **Recordings.** With Settings › Recording › *Keep recordings* (on by default), each dictation's audio
   is saved as a WAV file so you can play it back or transcribe it again. Turn the setting off and
   only the text is kept.
@@ -34,16 +39,22 @@ The app sets `allowBackup="false"`, so none of this is copied into Android's clo
 | A request for a model file (the file's name; your IP address, as with any download) | Hugging Face (`huggingface.co`) | Only when you tap *Download* for a speech model in Settings › Models, or turn on Settings › Conversation, which downloads its two speaker models once. No audio, text or identifier of yours is sent. |
 | Text or a recording you share | The app you pick in Android's share sheet | Only when you tap *Share text* or *Audio*. The app you choose then handles it under its own policy. |
 | Text you copy | Android's clipboard | Only when you tap *Copy* or tap a dictation in History. Other apps you use may read the clipboard. |
+| The app's own short phrases ("Recording", "Paused", "Stopped, 4 minutes") | Android's text-to-speech engine, on the phone | Only with Settings › Recording › *Speak when a recording starts and stops* on (off by default). The app uses only a voice already installed on the phone that needs no network. None of your words are sent to it. |
+| Whether a dictation is recording or paused (no title, no text, no audio) | Android, which passes it to a connected car or headset | Only while a dictation runs with *Record in the background* on, so the steering wheel's or headset's play/pause button can pause and resume it. |
 
 Hugging Face's handling of download requests is described in
 [its privacy policy](https://huggingface.co/privacy). The downloads use HTTPS.
 
-Nothing else is sent: no audio, no transcripts, no usage statistics, no device identifiers.
+Nothing else is sent: no audio, no transcripts, no usage statistics, no device identifiers. The
+"Start recording" shortcut on the app's icon only opens the app; it sends nothing.
 
 ## 4. Permissions
 
 - `RECORD_AUDIO` — to hear you while a dictation runs. The microphone is never opened at any other time.
 - `INTERNET` — only to download speech models (section 3).
+- `MODIFY_AUDIO_SETTINGS` — only with Settings › Recording › *Microphone* on *Car or headset when
+  connected*: to record from a car's or headset's Bluetooth microphone while a dictation runs. Using it
+  may pause the car's music, as a call would.
 - `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MICROPHONE`, `POST_NOTIFICATIONS` — only with Settings ›
   Recording › *Record in the background* (off by default): they keep a dictation going after you leave
   the app, and show a notification with its time and pause and stop while it does.
