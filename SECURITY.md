@@ -33,10 +33,6 @@ uses, and is protected only as well as that link is. The link is opened when a d
 released when it pauses or stops; your audio and text are never sent the other way. If the car or headset goes away
 mid-dictation, the recording stops there and what was recorded is kept.
 
-*Speak when a recording starts and stops* (off by default) hands Android's text-to-speech engine the
-app's own few phrases, never your words, and only with a voice already installed that needs no
-network. A phrase not finished within a few seconds is cut off before the microphone opens.
-
 ## Model downloads
 
 - Models come from Hugging Face over HTTPS (TLS by rustls, checked against Mozilla's root certificates built into the app) and are

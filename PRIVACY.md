@@ -39,7 +39,6 @@ The app sets `allowBackup="false"`, so none of this is copied into Android's clo
 | A request for a model file (the file's name; your IP address, as with any download) | Hugging Face (`huggingface.co`) | Only when you tap *Download* for a speech model in Settings › Models, or turn on Settings › Conversation, which downloads its two speaker models once. No audio, text or identifier of yours is sent. |
 | Text or a recording you share | The app you pick in Android's share sheet | Only when you tap *Share text* or *Audio*. The app you choose then handles it under its own policy. |
 | Text you copy | Android's clipboard | Only when you tap *Copy* or tap a dictation in History. Other apps you use may read the clipboard. |
-| The app's own short phrases ("Recording", "Paused", "Stopped, 4 minutes") | Android's text-to-speech engine, on the phone | Only with Settings › Recording › *Speak when a recording starts and stops* on (off by default). The app uses only a voice already installed on the phone that needs no network. None of your words are sent to it. |
 | Whether a dictation is recording or paused (no title, no text, no audio) | Android, which passes it to a connected car or headset | Only while a dictation runs with *Record in the background* on, so the steering wheel's or headset's play/pause button can pause and resume it. |
 
 Hugging Face's handling of download requests is described in
