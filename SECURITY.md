@@ -1,6 +1,6 @@
 # Security Policy
 
-Wavoscribe for Android. Last updated 20 November 2026.
+Wavoscribe for Android. Last updated 21 November 2026.
 
 What protects your data, and where each protection stops, written so each claim can be checked.
 What data the app holds and sends is in the [privacy policy](PRIVACY.md).
@@ -39,6 +39,16 @@ mid-dictation, the recording stops there and what was recorded is kept.
   written only inside the app's model folder: a file name that would leave it is refused.
 - An interrupted download resumes where it stopped.
 - A model is data read by the speech engine, not code. The app does not run anything it downloads.
+
+## Models you add
+
+A model file you add yourself is untrusted input: the app cannot know who made it. Before it is kept,
+the app checks that it is a GGUF file of version 3 in wavo's format, that it is a Whisper, Parakeet,
+GigaAM or Moonshine model, and that it is at most 2.5 GB; a file that fails the check is refused and
+deleted, but its row, with the reason, stays in Settings › Models until you delete it; the app keeps a small record there with the name you gave it and the original file's name. The file is copied into the app's own model folder and read as data by the speech
+engine, which runs on the phone with the app's own permissions and nothing more. These checks are
+on the file's format and size; they do not tell you that a model is accurate or that its maker can
+be trusted, so add only files from sources you trust. Adding a model uses no network connection.
 
 ## Sharing
 

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Wavoscribe for Android. Last updated 20 November 2026.
+Wavoscribe for Android. Last updated 21 November 2026.
 
 **The short version.** Wavoscribe recognizes your speech on your phone. Your voice, your recordings
 and the text made from them never leave it unless you share them yourself. The app has no account,
@@ -24,11 +24,20 @@ never sent anywhere by the app:
   headset; only the app's spoken phrases and whether a dictation is recording or paused may reach it
   (section 3).
 - **Recordings.** With Settings › Recording › *Keep recordings* (on by default), each dictation's audio
-  is saved as a WAV file so you can play it back or transcribe it again. Turn the setting off and
-  only the text is kept.
+  is saved as a WAV file so you can play it back or transcribe it again. While a dictation runs, its
+  audio is written to a file on the phone as it is recorded, so a long recording doesn't fill the
+  memory. Turn the setting off and only the text is kept: the file is deleted when the dictation
+  ends, or the next time the app starts if it closed during one.
 - **History.** The text of each dictation, its name, the model used, how long it took and when it was
   made.
 - **Downloaded models**, your personal dictionary and your settings.
+- **Model files you add.** A speech model file you add yourself (Settings › Models › *Add a model…*, or
+  *Open with* / Share from another app) is copied into the app's private storage, with the name you
+  give it, and stays there until you delete it. The file you picked stays where it was; the app does
+  not change or delete it. A file that fails the app's check is deleted from the app, but a small
+  record stays in Settings › Models, with the name you gave it, the original file's name and the
+  reason, until you delete it. Adding a model uses no network connection: you download the file yourself,
+  with your own browser.
 
 The app sets `allowBackup="false"`, so none of this is copied into Android's cloud backup.
 
@@ -69,8 +78,9 @@ Nothing else is sent: no audio, no transcripts, no usage statistics, no device i
 ## 6. Retention and deletion
 
 Everything is on your phone and stays until you delete it. Delete a dictation from History and its
-text is removed; deleting the last version of a recording also deletes its audio file. Models can be
-deleted in Settings › Models. Clearing the app's storage in Android's settings, or uninstalling the app,
+text is removed; deleting the last version of a recording also deletes its audio file. Models, including the
+ones you added, can be deleted in Settings › Models; for a model you added, the original file you
+picked is not touched. Clearing the app's storage in Android's settings, or uninstalling the app,
 removes all of it. We hold no copy, so there is nothing for us to delete.
 
 ## 7. Children
