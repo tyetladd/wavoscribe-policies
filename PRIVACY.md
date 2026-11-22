@@ -26,8 +26,10 @@ never sent anywhere by the app:
 - **Recordings.** With Settings › Recording › *Keep recordings* (on by default), each dictation's audio
   is saved as a WAV file so you can play it back or transcribe it again. While a dictation runs, its
   audio is written to a file on the phone as it is recorded, so a long recording doesn't fill the
-  memory. Turn the setting off and only the text is kept: the file is deleted when the dictation
-  ends, or the next time the app starts if it closed during one.
+  memory. Beside each kept recording the app stores when it started and when it resumed after each
+  pause, to stamp turns with the time of day; it is deleted with the recording. Turn the setting off
+  and only the text is kept: the file is deleted when the dictation ends, or the next time the app
+  starts if it closed during one.
 - **History.** The text of each dictation, its name, the model used, how long it took and when it was
   made.
 - **Downloaded models**, your personal dictionary and your settings.
