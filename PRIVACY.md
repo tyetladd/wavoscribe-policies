@@ -48,7 +48,7 @@ The app sets `allowBackup="false"`, so none of this is copied into Android's clo
 
 | Data | Goes to | When |
 |---|---|---|
-| A request for a model file (the file's name; your IP address, as with any download) | Hugging Face (`huggingface.co`) | Only when you tap *Download* for a speech model in Settings › Models, or for the speaker models *Process…* uses to tell speakers apart (pyannote's two, or NVIDIA's Nemotron 3 Diarization, as Settings › Models › *Speaker model* names), each downloaded once. No audio, text or identifier of yours is sent. |
+| A request for a model file (the file's name; your IP address, as with any download) | Hugging Face (`huggingface.co`) | Only when you tap *Download* for a speech model in Settings › Models, or for the speaker model *Process…* uses to tell speakers apart (NVIDIA's Nemotron 3 Diarization), downloaded once. No audio, text or identifier of yours is sent. |
 | Text or a recording you share | The app you pick in Android's share sheet | Only when you tap *Share text* or *Audio*. The app you choose then handles it under its own policy. |
 | Text you copy | Android's clipboard | Only when you tap *Copy* or tap a dictation in History. Other apps you use may read the clipboard. |
 | Whether a dictation is recording or paused (no title, no text, no audio) | Android, which passes it to a connected car or headset | Only while a dictation runs with *Record in the background* on, so the steering wheel's or headset's play/pause button can pause and resume it. |
