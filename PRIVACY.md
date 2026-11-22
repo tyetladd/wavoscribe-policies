@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Wavoscribe for Android. Last updated 21 November 2026.
+Wavoscribe for Android. Last updated 22 November 2026.
 
 **The short version.** Wavoscribe recognizes your speech on your phone. Your voice, your recordings
 and the text made from them never leave it unless you share them yourself. The app has no account,
@@ -27,9 +27,10 @@ never sent anywhere by the app:
   is saved as a WAV file so you can play it back or transcribe it again. While a dictation runs, its
   audio is written to a file on the phone as it is recorded, so a long recording doesn't fill the
   memory. Beside each kept recording the app stores when it started and when it resumed after each
-  pause, to stamp turns with the time of day; it is deleted with the recording. Turn the setting off
-  and only the text is kept: the file is deleted when the dictation ends, or the next time the app
-  starts if it closed during one.
+  pause, to stamp turns with the time of day, and the words each model heard in it with their times,
+  so *Process…* can tell the speakers apart without transcribing it again; both are deleted with the
+  recording. Turn the setting off and only the text is kept: the file is deleted when the dictation
+  ends, or the next time the app starts if it closed during one.
 - **History.** The text of each dictation, its name, the model used, how long it took and when it was
   made.
 - **Downloaded models**, your personal dictionary and your settings.
