@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Wavoscribe for Android. Last updated 22 November 2026.
+Wavoscribe for Android. Last updated 23 November 2026.
 
 **The short version.** Wavoscribe recognizes your speech on your phone. Your voice, your recordings
 and the text made from them never leave it unless you share them yourself. The app has no account,
@@ -32,7 +32,10 @@ never sent anywhere by the app:
   recording. Turn the setting off and only the text is kept: the file is deleted when the dictation
   ends, or the next time the app starts if it closed during one.
 - **History.** The text of each dictation, its name, the model used, how long it took and when it was
-  made.
+  made. With Settings › Recording › *Add location* (off by default), also the phone's own position
+  for each dictation — latitude, longitude and how accurate the fix was — and a line at the end of
+  its text with the recording's time and those coordinates. The position is not looked up on the
+  network and is deleted with the dictation.
 - **Downloaded models**, your personal dictionary and your settings.
 - **Model files you add.** A speech model file you add yourself (Settings › Models › *Add a model…*, or
   *Open with* / Share from another app) is copied into the app's private storage, with the name you
@@ -49,7 +52,7 @@ The app sets `allowBackup="false"`, so none of this is copied into Android's clo
 | Data | Goes to | When |
 |---|---|---|
 | A request for a model file (the file's name; your IP address, as with any download) | Hugging Face (`huggingface.co`) | Only when you tap *Download* for a speech model in Settings › Models, or for the speaker model *Process…* uses to tell speakers apart (NVIDIA's Nemotron 3 Diarization), downloaded once. No audio, text or identifier of yours is sent. |
-| Text or a recording you share | The app you pick in Android's share sheet | Only when you tap *Share text* or *Audio*. The app you choose then handles it under its own policy. |
+| Text (which ends with the location when *Add location* was on) or a recording you share | The app you pick in Android's share sheet | Only when you tap *Share text* or *Audio*. The app you choose then handles it under its own policy. |
 | Text you copy | Android's clipboard | Only when you tap *Copy* or tap a dictation in History. Other apps you use may read the clipboard. |
 | Whether a dictation is recording or paused (no title, no text, no audio) | Android, which passes it to a connected car or headset | Only while a dictation runs with *Record in the background* on, so the steering wheel's or headset's play/pause button can pause and resume it. |
 
@@ -69,6 +72,9 @@ Nothing else is sent: no audio, no transcripts, no usage statistics, no device i
 - `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MICROPHONE`, `POST_NOTIFICATIONS` — only with Settings ›
   Recording › *Record in the background* (off by default): they keep a dictation going after you leave
   the app, and show a notification with its time and pause and stop while it does.
+- `ACCESS_COARSE_LOCATION`, `ACCESS_FINE_LOCATION` — only with Settings › Recording › *Add location*
+  (off by default): when a dictation starts, to put the coordinates in its text and history. The app
+  does not use the location in the background.
 
 ## 5. What we do not do
 

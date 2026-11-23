@@ -1,6 +1,6 @@
 # Security Policy
 
-Wavoscribe for Android. Last updated 21 November 2026.
+Wavoscribe for Android. Last updated 23 November 2026.
 
 What protects your data, and where each protection stops, written so each claim can be checked.
 What data the app holds and sends is in the [privacy policy](PRIVACY.md).
@@ -13,8 +13,8 @@ breached. The one network use is downloading speech models (below).
 
 ## Data at rest
 
-- Recordings (16 kHz WAV files), the history database, the personal dictionary and the models are kept in the app's private
-  storage. Android's sandbox keeps other apps from reading it, and Android's file-based encryption
+- Recordings (16 kHz WAV files), the history database (including the coordinates *Add location*
+  keeps), the personal dictionary and the models are kept in the app's private storage. Android's sandbox keeps other apps from reading it, and Android's file-based encryption
   encrypts it while the phone is locked.
 - The app does not add encryption of its own on top. Someone who can unlock your phone, or a rooted
   phone running hostile software, can read it. If that matters to you, turn off Settings › Recording ›
@@ -54,7 +54,8 @@ be trusted, so add only files from sources you trust. Adding a model uses no net
 
 A recording you share goes out as a read-only content link to the one app you pick, through
 Android's FileProvider; the app's folders are not exported otherwise. Shared text carries the
-dictation's name, time and text and nothing else.
+dictation's name, time and text — and, when *Add location* was on, the time-and-place line the text
+ends with — and nothing else.
 
 ## Builds
 
