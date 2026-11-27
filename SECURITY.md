@@ -1,6 +1,6 @@
 # Security Policy
 
-Wavoscribe for Android. Last updated 23 November 2026.
+Wavoscribe for Android. Last updated 27 November 2026.
 
 What protects your data, and where each protection stops, written so each claim can be checked.
 What data the app holds and sends is in the [privacy policy](PRIVACY.md).
@@ -38,6 +38,10 @@ mid-dictation, the recording stops there and what was recorded is kept.
 - Models come from Hugging Face over HTTPS (TLS by rustls, checked against Mozilla's root certificates built into the app) and are
   written only inside the app's model folder: a file name that would leave it is refused.
 - An interrupted download resumes where it stopped.
+- GigaAM v4 is downloaded as Sber's own files from their Hugging Face repository (`ai-sage/GigaAM-v4`), at a
+  fixed commit. Each file is checked against a size and SHA-256 built into the app before the phone converts
+  them into the model file; a file that doesn't match is deleted and refused, and the downloaded files are
+  deleted once the model is made.
 - A model is data read by the speech engine, not code. The app does not run anything it downloads.
 
 ## Models you add
